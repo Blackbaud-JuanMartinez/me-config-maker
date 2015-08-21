@@ -1,0 +1,21 @@
+<bb-grid bb-grid-options="gridOptions" bb-multiselect-actions="gridActions" bb-selections-updated="updateActions(selections)">
+    <bb-grid-filters-summary ng-show="appliedFilters.decades.length > 0" bb-options="filterOptions">
+        Excluding <span ng-repeat="item in appliedFilters.decades">{{item.name}}<span ng-if="!$last">, </span></span>
+    </bb-grid-filters-summary>
+    <bb-grid-filters bb-options="filterOptions">
+        <bb-grid-filters-group bb-grid-filters-group-label="'Decades'">
+            <div>
+                <label><input type="checkbox" bb-check ng-model="locals.filter1980s" /> 1980s</label> 
+            </div>
+            <div>
+                <label><input type="checkbox" bb-check ng-model="locals.filter1990s" /> 1990s</label> 
+            </div>
+            <div>
+                <label><input type="checkbox" bb-check ng-model="locals.filter2000s" /> 2000s</label> 
+            </div>
+            <div>
+                <label><input type="checkbox" bb-check ng-model="locals.filter2010s" /> 2010s</label> 
+            </div>
+        </bb-grid-filters-group>
+    </bb-grid-filters>
+</bb-grid>

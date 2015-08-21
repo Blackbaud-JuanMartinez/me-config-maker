@@ -1,0 +1,17 @@
+{
+  "name": "sky-sample",
+  "version": "1.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "sky": "git+https://github.com/blackbaud/sky#6b749567074d65f71d9613b177ce8d1f80ee77bd"
+  },
+  "resolutions": {
+    "angular": "1.3.14"
+  }
+}

@@ -1,0 +1,25 @@
+<div class="bb-page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-md-3 col-lg-2">
+                <img ng-src="{{artist.image_url}}" class="img-circle center-block" style="height: 150px" />
+            </div>
+            <div class="col-xs-12 col-md-9 col-lg-10">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1>{{artist.name}}</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p></p>
+                        <p style="white-space: pre-wrap">{{artist.bio}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <bb-tile-dashboard bb-layout="layout" bb-tiles="tiles"></bb-tile-dashboard>
+</div>
