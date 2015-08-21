@@ -60,17 +60,6 @@
                     }
                 });
         }])
-        .run(['bbDataConfig', 'bbOmnibarConfig', 'bbHelpwidgetConfig', function (bbDataConfig, bbOmnibarConfig, bbHelpwidgetConfig) {
-            bbDataConfig.dataUrlFilter = function (url) {
-                return url + '.json';
-            };
-            
-            bbOmnibarConfig.enableSearch = true;
-            bbOmnibarConfig.enableHelp = true;
-            
-            bbHelpwidgetConfig.productId = 'REx';
-            bbHelpwidgetConfig.url = '//p1helpui.renxt.blackbaud.net/helpwidget.js';
-        }])
         .filter('spaceToUnderscore', function () {
             return spaceToUnderscore;
         })

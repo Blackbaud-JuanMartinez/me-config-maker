@@ -118,9 +118,22 @@ angular.module('musicapp.templates', []).run(['$templateCache', function($templa
         '    </li>\n' +
         '</ul>');
     $templateCache.put('pages/overview/artists/artistlist.html',
-        '<bb-grid bb-grid-options="gridOptions" bb-multiselect-actions="gridActions" bb-selections-updated="updateActions(selections)">\n' +
-        '    \n' +
-        '</bb-grid>');
+        '<form class="form-inline">\n' +
+        '    <div class="form-group">\n' +
+        '        <label for="find">Find</label>\n' +
+        '        <input type="text" class="form-control" id="find">\n' +
+        '    </div>\n' +
+        '    <button type="submit" class="btn btn-default">Submit</button>\n' +
+        '</form>\n' +
+        '<form>\n' +
+        '    <div class="form-inline">\n' +
+        '        <h3>Client Information</h3>\n' +
+        '        <label for="client-name">Client Name</label>\n' +
+        '        <input type="text" class="form-control" id="client-name">\n' +
+        '        <label for="serial-number">Serial Number</label>\n' +
+        '        <input type="text" class="form-control" id="serial-number">\n' +
+        '    </div>\n' +
+        '</form>');
     $templateCache.put('pages/overview/artists/artistphotocolumn.html',
         '<img ng-src="data/artists/{{::data.name | spaceToUnderscore}}/photo.jpg" class="img-circle ma-overview-artists-artist-img" />');
     $templateCache.put('pages/overview/overview.html',
@@ -129,17 +142,10 @@ angular.module('musicapp.templates', []).run(['$templateCache', function($templa
         '        <tabset bb-tab-scroll bb-tab-scroll-ready="tabsReady" class="bb-page-tabs">\n' +
         '            <tab active="artistsTabActive" bb-tab-sref="home.artists">\n' +
         '                <tab-heading>\n' +
-        '                    Artists\n' +
+        '                    Config Maker\n' +
         '                    <span class="bb-tab-header-count">{{artistCount}}</span>\n' +
         '                </tab-heading>\n' +
         '                <div ui-view="artistlist"></div>\n' +
-        '            </tab>\n' +
-        '            <tab active="albumsTabActive" bb-tab-sref="home.albums">\n' +
-        '                <tab-heading>\n' +
-        '                    Albums\n' +
-        '                    <span class="bb-tab-header-count">{{albumCount}}</span>\n' +
-        '                </tab-heading>\n' +
-        '                <div ui-view="albumlist"></div>\n' +
         '            </tab>\n' +
         '        </tabset>\n' +
         '    </div>\n' +

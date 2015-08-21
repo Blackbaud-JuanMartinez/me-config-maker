@@ -3,17 +3,10 @@
         <tabset bb-tab-scroll bb-tab-scroll-ready="tabsReady" class="bb-page-tabs">
             <tab active="artistsTabActive" bb-tab-sref="home.artists">
                 <tab-heading>
-                    Artists
+                    Config Maker
                     <span class="bb-tab-header-count">{{artistCount}}</span>
                 </tab-heading>
                 <div ui-view="artistlist"></div>
-            </tab>
-            <tab active="albumsTabActive" bb-tab-sref="home.albums">
-                <tab-heading>
-                    Albums
-                    <span class="bb-tab-header-count">{{albumCount}}</span>
-                </tab-heading>
-                <div ui-view="albumlist"></div>
             </tab>
         </tabset>
     </div>
